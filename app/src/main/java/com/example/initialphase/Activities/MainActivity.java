@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity{
         Intent i = new Intent(this, Experiences.class);
         startActivity(i);
     }
+
+    public void onClickDocs(View view) {
+        Intent i = new Intent(this, DocsActivity.class);
+        startActivity(i);
+    }
 }

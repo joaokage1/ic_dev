@@ -27,4 +27,6 @@
     <string name="RegisterComplete">Registro completo !</string>
     <string name="Thepasswordsmustbeequals">As senhas devem ser iguais !</string>
     <string name="verifyphoto">Por favor insira uma foto para o perfil !</string>
+    <string name="doc">Docs &amp; Requisitos</string>
+    <string name="responsabilities">Estes documentos não tiram a responsabilidade de ler o edital!</string>
 </resources>
