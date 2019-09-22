@@ -154,7 +154,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Documentação básica exida do candidato"
+                android:text="Documentação básica exigida do candidato"
                 android:textColor="@android:color/darker_gray" />
 
         </LinearLayout>

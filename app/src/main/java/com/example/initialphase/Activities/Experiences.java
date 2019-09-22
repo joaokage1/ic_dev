@@ -6,7 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.initialphase.R;
-import com.example.initialphase.SlideAdapter;
+import com.example.initialphase.Adapter.SlideAdapter;
 
 public class Experiences extends AppCompatActivity {
 

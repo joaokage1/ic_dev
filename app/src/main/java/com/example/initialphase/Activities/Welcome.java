@@ -11,18 +11,22 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.initialphase.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity {
 
     LinearLayout l1,l2;
     Button btnsub, btnlog;
     Animation uptodown,downtoup;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        btnsub = (Button)findViewById(R.id.button_cadastrar);
+        mAuth = FirebaseAuth.getInstance();
         btnlog = (Button)findViewById(R.id.button_log);
         l1 = (LinearLayout) findViewById(R.id.l1);
         l2 = (LinearLayout) findViewById(R.id.l2);
@@ -33,8 +37,26 @@ public class welcome extends AppCompatActivity {
     }
 
     public void logOnClick(View view){
-        Intent homeActivity = new Intent(getApplicationContext(), MainActivity.class);
+        Intent homeActivity = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(homeActivity);
         finish();
+    }
+
+    private void updateUI() {
+        Intent intent = new Intent(this,
+                MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if (user != null){
+            updateUI();
+        }
     }
 }

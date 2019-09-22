@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InterTravellin</string>
+    <string name="PleaseVerifyallfields">Verifique se todos os campos foram prenchidos</string>
+    <string name="action_sign_in_short">ENTRAR</string>
+    <string name="invalid_password">Senha tem que ter no mínimo 5 caracteres</string>
+    <string name="invalid_username">Nome de usuário inválido</string>
+    <string name="login_failed">Falha no LogIn</string>
+    <string name="prompt_password">SENHA</string>
+    <string name="title_activity_login">LOGIN</string>
+    <string name="welcome">Bem Vindo!</string>
+    <string name="lbl_forgot_password">Esqueceu a Senha?</string>
+    <string name="forgot_password_msg">" Só precisamos do seu ID de e-mail registrado para enviar as instruções de redefinição de senha."</string>
+    <string name="btn_reset_password">Trocar Senha</string>
+    <string name="btn_back">voltar</string>
+    <string name="regEmailReset">" Digite seu e-mail cadastrado"</string>
+    <string name="Wehavesentyouinstructionstoresetyourpassword">" Nós lhe enviamos instruções para redefinir sua senha !!"</string>
+    <string name="Failedtosendresetemail">"Falha ao enviar e-mail de redefinição! "</string>
+    <string name="confirmPassword">Confirme a senha</string>
+    <string name="mail">E-Mail</string>
+    <string name="name">Nome</string>
+    <string name="password">Senha</string>
+    <string name="regBtn">REGISTRAR</string>
+    <string name="Accountcreated">Conta criada !!</string>
+    <string name="Accountcreationfailed">Criação da conta falhou !!</string>
+    <string name="Allfieldsmustbefilled">Todos os camps devem estar preenchidos</string>
+    <string name="RegisterComplete">Registro completo !</string>
+    <string name="Thepasswordsmustbeequals">As senhas devem ser iguais !</string>
+    <string name="verifyphoto">Por favor insira uma foto para o perfil !</string>
+</resources>
