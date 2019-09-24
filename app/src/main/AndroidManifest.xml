@@ -15,11 +15,22 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.DocsActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Activities.RegisterActivity"  android:screenOrientation="portrait"/>
-        <activity android:name=".Activities.ResetPasswordActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".Activities.LoginActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".Activities.Experiences" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ProfileActivity"></activity>
+        <activity
+            android:name=".Activities.DocsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Experiences"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.Profile"
             android:screenOrientation="portrait" />

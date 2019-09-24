@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void onClickProfile(View view) {
-        Intent i = new Intent(this, Profile.class);
+        Intent i = new Intent(this, ProfileActivity.class);
         startActivity(i);
     }
 

@@ -41,7 +41,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
@@ -50,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="70dp">
 
             <TextView
                 android:id="@+id/textView2"
@@ -70,8 +71,8 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="170dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -101,8 +102,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="170dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -140,8 +141,8 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="170dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -171,8 +172,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="170dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -210,8 +211,8 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="170dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
