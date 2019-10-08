@@ -67,14 +67,14 @@
             android:layout_height="170dp"
             android:layout_margin="5dp"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickProfile">
 
             <LinearLayout
                 android:id="@+id/cv_profile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:onClick="onClickProfile"
                 android:orientation="vertical">
 
                 <ImageView
@@ -115,51 +115,51 @@
     android:gravity="center"
     android:orientation="horizontal">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="170dp"
-        android:layout_margin="5dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickDocs">
 
-        <LinearLayout
-            android:id="@+id/cv_documentation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:onClick="onClickDocs"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:padding="5dp"
-                android:src="@drawable/document" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Documentação e Requisitos"
-                android:textStyle="bold" />
-
-            <View
+            <LinearLayout
+                android:id="@+id/cv_documentation"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="5dp"
-                android:background="@color/lightgray" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="5dp"
-                android:text="Documentação básica exigida do candidato"
-                android:textColor="@android:color/darker_gray" />
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="5dp"
+                    android:src="@drawable/document" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Documentação e Requisitos"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Documentação básica exigida do candidato"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="160dp"
@@ -219,7 +219,8 @@
             android:layout_height="170dp"
             android:layout_margin="5dp"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickProvasAnteriores">
 
             <LinearLayout
                 android:id="@+id/cv_exam"
@@ -253,7 +254,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Provas de línguas de editais anteriores."
+                    android:text="Provas de línguas anteriores Prolif e IsF."
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
@@ -264,14 +265,14 @@
             android:layout_height="170dp"
             android:layout_margin="5dp"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickExperiences">
 
             <LinearLayout
                 android:id="@+id/cv_exp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:onClick="onClickExperiences"
                 android:orientation="vertical">
 
                 <ImageView

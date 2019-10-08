@@ -15,7 +15,9 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ProfileActivity"></activity>
+        <activity android:name=".Activities.ProvasAnterioresLinguasActivity"></activity>
+        <activity android:name=".Activities.CompRendaActivity" />
+        <activity android:name=".Activities.ProfileActivity" />
         <activity
             android:name=".Activities.DocsActivity"
             android:screenOrientation="portrait" />

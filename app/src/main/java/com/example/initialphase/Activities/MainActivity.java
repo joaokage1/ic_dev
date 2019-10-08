@@ -30,4 +30,9 @@ public class MainActivity extends AppCompatActivity{
         Intent i = new Intent(this, DocsActivity.class);
         startActivity(i);
     }
+
+    public void onClickProvasAnteriores(View view) {
+        Intent i = new Intent(this, ProvasAnterioresLinguasActivity.class);
+        startActivity(i);
+    }
 }
