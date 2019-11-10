@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.RequirementsCheckListActivity"></activity>
+        <activity android:name=".Activities.CheckListProfileActivity"></activity>
+        <activity android:name=".Activities.RequirementsCheckListActivity" />
         <activity android:name=".Activities.DocsCheckListActivity" />
         <activity
             android:name=".Activities.ProvasAnterioresLinguasActivity"

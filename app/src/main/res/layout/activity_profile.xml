@@ -136,6 +136,7 @@
         android:layout_margin="5dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onClickCheckListProfile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/carviewVideos"
         app:layout_constraintStart_toStartOf="parent"

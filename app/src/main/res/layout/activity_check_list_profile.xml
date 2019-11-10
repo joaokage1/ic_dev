@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CheckListProfileActivity"
+    android:background="@color/lightgray"
+    android:padding="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="177dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Este questionário não garante ao participante a inscrição de qualquer bolsa de intercâmbio, é apenas um simulador com os itens mais comuns em editais afim de trazer uma preparação ao estudante que o realiza."
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txt_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Avaliação socioeconômicos"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_socioEconomico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb_socio_economico1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="De 0 até 1/2 salário mínimo – 20 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_socio_economico2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="De 1/2 até1 salário mínimo – 15 pontos " />
+
+                <RadioButton
+                    android:id="@+id/rb_socio_economico3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acima de 1 salário mínimo - 10 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Critérios acadêmicos"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_criteriosAcademicos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb_media1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média 6 a 6,9 - 6 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_media2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média 7 a 7,9 - 7 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_media3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média 8 a 8,9 - 8 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_media4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média 9 a 9,9 - 9 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_media5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média 10 - 10 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação em projetos de pesquisa devidamente registrado (s) na Pró-reitora de Pesquisa (PROPI IFTM), ou qualquer outra instituição similar(período mínimo de 6 meses)"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_projeto_pesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_ppesquisa1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Projeto de Pesquisa - 2,5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_ppesquisa2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Projetos de Pesquisa - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação em projetos de extensão devidamente registrados na Pró-reitora de Extensão (PROEXT IFTM) ou qualquer outra instituição similar(período mínimo de 4 meses)"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_projeto_extensao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_pextensao1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Projeto de extensão - 2,5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_pextensao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Projetos de Extensão - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação nas comissões de organização de eventos de cunho acadêmico,científico e cultural no âmbito do IFTM."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_comissao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_comissao_eventos1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Participação - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_comissao_eventos2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Participações - 10 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_comissao_eventos3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Participações - 15 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_comissao_eventos4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Participações - 20 pontos" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação com trabalho aprovado como pôster ou comunicação oral em eventos acadêmicos, científicos e/ou apresentações culturais no âmbito do IFTM."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/radioButton13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Apresentação - 1 ponto" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Apresentações - 2 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Apresentações - 3 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Apresentações - 4 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 Apresentações - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação com trabalho aprovado como pôster ou comunicação oral em eventos acadêmicos, científicos e/ou apresentações culturais de outras instituições."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_poster_externo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster_ext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Apresentação - 1 ponto" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster_ext2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Apresentações - 2 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster_ext3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Apresentações - 3 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster_ext4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Apresentações - 4 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_poster_ext5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 Apresentações - 5 pontos" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participar das atividades extracurriculares do Centro de Idiomas e Relações Internacionais do IFTM."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_atividadesCI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_atividadesCI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_atividadesCI1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Participação - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_atividadesCI2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Participações - 10 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_atividadesCI3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Participações - 15 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_atividadesCI4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Participações - 20 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Comprovação de ser aluno regularmente matriculado e frequente no Centro de Idiomas IFTM ou certificado de conclusão com carga horária mínima de 60 horas."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_linguasIFTM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_linguasIFTM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_linguasIFTM1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Lingua - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_linguasIFTM2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Linguas - 10 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Certificado de conclusão de curso de língua estrangeira com carga horária mínima de 60 horas de outras instituições."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_linguasExt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_linguasExt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_linguasExt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Lingua - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_linguasExt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Linguas - 10 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação como membro do grêmio estudantil, diretórios acadêmicos, Centro Acadêmico, empresa júnior, Programa de Educação Tutorial (PET), PIBID/PRP, Programa Jovens para ciência e Projeto Rondon, Itinerante Nacional e Internacional"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_participacoes_IFTM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma" />
+
+                <RadioButton
+                    android:id="@+id/rb_participacoes_IFTM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Participação - 3 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_participacoes_IFTM2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Participações - 6 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_participacoes_IFTM3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Participações - 9 pontos" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Ser e ter sido membro titular ou suplente do Conselho Superior (CONSUP) do IFTM. "
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_conselho"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb_conselho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_conselho2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sim - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Estar cadastrado no Banco de Estágio, Emprego e Currículo (BEEC) do IFTM. (Inserir dados pessoais, acadêmicos e/ou profissionais)."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_BEEC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb_BEEC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_BEEC2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sim - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Possuir título de eleitor."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_titulo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sim - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação como monitor no âmbito do IFTM. "
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_monitoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_monitoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_monitoria2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Monitoria - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_monitoria3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Monitorias - 10 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Participação como membro de Conselho Gestor, Conselho de Ética, Comissão Própria de Avaliação, Colegiados de Curso, dentre outros."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_membro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_membro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_membro2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Participação - 1 ponto" />
+
+                <RadioButton
+                    android:id="@+id/rb_membro3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Participações - 2 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_membro4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Participações - 3 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_membro5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Participações - 4 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_membro6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 Participações - 5 pontos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_question19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/pontuacao_background"
+                android:text="Teste de proficiência em Línguas Estrangeiras (TOEIC Bridge, TOEFL ITP, PROLIF dentre outras)."
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_testes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_testes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Participação - 5 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Participações - 10 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Participações - 15 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Participações - 20 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 Participações - 25 pontos" />
+
+                <RadioButton
+                    android:id="@+id/rb_testes7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6 Participações - 30 pontos" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_send_check_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pontuacao_background_profile"
+                android:text="Enviar Resposta"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -96,4 +96,10 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onClickCheckListProfile(View view){
+        Intent intent = new Intent(this,
+                CheckListProfileActivity.class);
+        startActivity(intent);
+    }
 }
