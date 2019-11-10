@@ -29,4 +29,6 @@
     <string name="verifyphoto">Por favor insira uma foto para o perfil !</string>
     <string name="doc">Docs &amp; Requisitos</string>
     <string name="responsabilities">Estes documentos não tiram a responsabilidade de ler o edital!</string>
+    <string name="score">PONTUAÇÃO</string>
+    <string name="ready">Esteja pronto para qualquer desafio !</string>
 </resources>

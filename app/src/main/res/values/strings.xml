@@ -30,4 +30,6 @@
     <string name="RegisterComplete">Register Complete !!</string>
     <string name="doc">Docs &amp; Requirements</string>
     <string name="responsabilities">This documents don\'t take away the responsabilitie of read the notice!</string>
+    <string name="score">SCORE</string>
+    <string name="ready">Be ready for any challanges !</string>
 </resources>

@@ -15,9 +15,17 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ProvasAnterioresLinguasActivity"></activity>
-        <activity android:name=".Activities.CompRendaActivity" />
-        <activity android:name=".Activities.ProfileActivity" />
+        <activity android:name=".Activities.RequirementsCheckListActivity"></activity>
+        <activity android:name=".Activities.DocsCheckListActivity" />
+        <activity
+            android:name=".Activities.ProvasAnterioresLinguasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CompRendaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.DocsActivity"
             android:screenOrientation="portrait" />
@@ -34,9 +42,6 @@
             android:name=".Activities.Experiences"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.Profile"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Activities.Welcome"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -48,6 +53,10 @@
         <activity
             android:name=".Activities.MainActivity"
             android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
