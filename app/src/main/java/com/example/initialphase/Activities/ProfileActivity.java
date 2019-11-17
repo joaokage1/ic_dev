@@ -1,5 +1,6 @@
 package com.example.initialphase.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
@@ -17,17 +18,28 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.initialphase.R;
+import com.example.initialphase.model.Pontuacao;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProfileActivity extends AppCompatActivity {
 
     Button button;
     FirebaseAuth mAuth;
     FirebaseUser currentUser;
+    FirebaseDatabase firebaseDatabase;
     private TextView ptxtName, txtx_pontuacao_profile, txt_p;
     private TextView ptxtMail, txt_ready;
     private ImageView imgPic, imageView4;
+    List<Pontuacao> listPontuacao;
 
     private boolean isOpen = false;
     private ConstraintSet layout1,layout2;
@@ -92,6 +104,39 @@ public class ProfileActivity extends AppCompatActivity {
                     isOpen = !isOpen ;
 
                 }
+
+            }
+        });
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+
+        DatabaseReference pontosReferncia =  firebaseDatabase.getReference("Pontuacao").child("pprofile");
+
+        pontosReferncia.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                listPontuacao = new ArrayList<>();
+                for (DataSnapshot snap:dataSnapshot.getChildren()) {
+                    Pontuacao p = snap.getValue(Pontuacao.class);
+                    listPontuacao.add(p);
+                }
+
+                Pontuacao p = new Pontuacao();
+                for (Pontuacao pontuacao: listPontuacao ) {
+                    if (pontuacao.getUname().equalsIgnoreCase(mAuth.getCurrentUser().getDisplayName())){
+                        p = pontuacao;
+                    }
+                }
+
+                if (p.getContent() == null){
+                    txtx_pontuacao_profile.setText("0");
+                }else{
+                    txtx_pontuacao_profile.setText(p.getContent());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
