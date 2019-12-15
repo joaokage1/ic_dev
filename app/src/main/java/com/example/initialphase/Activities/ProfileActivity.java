@@ -147,4 +147,10 @@ public class ProfileActivity extends AppCompatActivity {
                 CheckListProfileActivity.class);
         startActivity(intent);
     }
+
+    public void onClickVideosProfile(View view){
+        Intent intent = new Intent(this,
+                VideosActivity.class);
+        startActivity(intent);
+    }
 }

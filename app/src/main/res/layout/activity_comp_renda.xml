@@ -24,6 +24,65 @@
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="a - A comprovação de renda poderá ser feita por meio de um ou alguns dos
+seguintes documentos: \n\n
+i. Contracheques referentes aos 03 (três) últimos meses; \n
+ii. Carteira de Trabalho e Previdência Social atualizada, contendo: folha de
+identificação com foto, frente e verso; folha do último contrato de trabalho
+e folha seguinte em branco; alteração salarial, última página preenchida e
+folha seguinte em branco;\n
+iii. Declaração comprobatória de percepção de rendimentos atualizado (pro
+labore), feita por contador ou técnico contábil inscrito no CRC, juntamente
+com guias de recolhimento de INSS referentes ao período apresentado;\n
+iv. Comprovante de recebimento de pensões referentes aos 03 (três) últimos
+meses;\n
+v. Comprovante de recebimento de proventos emitidos pelo INSS ou outro
+órgão pagador referente aos 03 (três) últimos meses;\n
+vi. Comprovante de recebimento de comissões referentes aos 03 (três)
+últimos meses;\n
+vii. Declaração de Imposto de Renda Pessoa Física (Declaração de Bens
+incluída) do exercício anterior, acompanhada do recibo de entrega e
+demais folhas que compõem a declaração de todos os membros da
+família;\n
+viii. Contrato ou recibo de pagamento de valor proveniente de estágio ou
+atividade semelhante referentes aos 03 (três) últimos meses;\n
+ix. Comprovação de recebimento de bolsa acadêmica ou referente
+participação em outros projetos de natureza institucional, referentes aos
+03 (três) últimos meses;\n
+\n
+b. Em caso de algum dos integrantes do grupo familiar (inclusive o próprio)
+estiver desempregado e não possuir renda, nesse caso deverão ser
+apresentadas cópias dos documentos a seguir, juntamente com declaração
+de pessoa sem renda atualizado, devidamente preenchida e
+assinada:\n
+i. Carteira de Trabalho e Previdência Social atualizada: folha de
+identificação com foto (frente e verso); e\n
+ii. Carteira de Trabalho e Previdência Social atualizada: folha do último
+contrato de trabalho e folha seguinte em branco;\n\n
+
+c. O estudante, economicamente dependente, que resida sozinho ou em
+república, casa de amigos ou parentes, etc. ficará obrigado a apresentar os
+documentos de comprovação de renda atualizada do grupo familiar (pai, mãe, responsáveis legais, irmãos, etc.), mesmo que estes estejam em outro
+município;\n\n
+d. Para os integrantes do grupo familiar do candidato (inclusive o próprio candidato)
+que sejam profissionais informais, a comprovação de renda será feita mediante
+declaração atualizada de profissional informal informando o valor médio mensal
+de sua renda bruta, juntamente com a documentação elencada abaixo,
+juntamente com extrato de vínculos e contribuições à Previdência (CNIS -
+Cadastro Nacional de Informações Sociais) que comprove inexistência de
+vínculo empregatício ou outra fonte de renda.\n
+i. Carteira de Trabalho e Previdência Social atualizada: folha de
+identificação com foto (frente e verso); e\n
+ii. Carteira de Trabalho e Previdência Social atualizada: folha do último
+contrato de trabalho e folha seguinte em branco."
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

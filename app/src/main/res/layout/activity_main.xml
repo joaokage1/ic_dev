@@ -23,7 +23,8 @@
             android:layout_height="170dp"
             android:layout_margin="5dp"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickinscricao">
 
             <LinearLayout
                 android:id="@+id/cv_targets"
@@ -161,50 +162,51 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="170dp"
-        android:layout_margin="5dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="onClickPaises">
 
-        <LinearLayout
-            android:id="@+id/cv_country"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:padding="5dp"
-                android:src="@drawable/informacao_pais" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Países, Cuturas e Conhecimento"
-                android:textStyle="bold" />
-
-            <View
+            <LinearLayout
+                android:id="@+id/cv_country"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="5dp"
-                android:background="@color/lightgray" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="5dp"
-                android:text="Informações dos países disponíveis"
-                android:textColor="@android:color/darker_gray" />
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="5dp"
+                    android:src="@drawable/informacao_pais" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Países, Cuturas e Conhecimento"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Informações dos países disponíveis"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 </LinearLayout>
 
     <LinearLayout

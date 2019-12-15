@@ -3,6 +3,7 @@ package com.example.initialphase.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -33,6 +34,18 @@ public class MainActivity extends AppCompatActivity{
 
     public void onClickProvasAnteriores(View view) {
         Intent i = new Intent(this, ProvasAnterioresLinguasActivity.class);
+        startActivity(i);
+    }
+
+    public void onClickPaises(View view) {
+        Intent i = new Intent(this, PaisesECulturasActivity.class);
+        startActivity(i);
+    }
+
+    public void onClickinscricao(View view){
+        String url = "http://www.iftm.edu.br/internacional/editais/";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
         startActivity(i);
     }
 }
