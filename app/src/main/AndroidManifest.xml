@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.PaisesECulturasActivity"></activity>
+        <activity android:name=".Activities.CityDetailActivity"></activity>
+        <activity android:name=".Activities.PaisesECulturasActivity" />
         <activity android:name=".Activities.VideosActivity" />
         <activity android:name=".Activities.CheckListProfileActivity" />
         <activity android:name=".Activities.RequirementsCheckListActivity" />
