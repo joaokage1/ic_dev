@@ -32,19 +32,37 @@
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="1080px"
             android:background="@drawable/spaceullustration"
             android:orientation="vertical">
 
             <Button
 
                 android:id="@+id/button_log"
-                android:layout_width="wrap_content"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/buttonstyle"
                 android:onClick="logOnClick"
                 android:text="    ENTRAR    " />
+
+            <Button
+
+                android:id="@+id/button_log_gmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:background="@drawable/buttonstyle"
+                android:drawableStart="@drawable/googlelogo"
+                android:text="   ENTRAR COM GOOGLE" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_google"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
