@@ -153,4 +153,10 @@ public class ProfileActivity extends AppCompatActivity {
                 VideosActivity.class);
         startActivity(intent);
     }
+
+    public void onClickForumProfile(View view){
+        Intent intent = new Intent(this,
+                ForumActivity.class);
+        startActivity(intent);
+    }
 }

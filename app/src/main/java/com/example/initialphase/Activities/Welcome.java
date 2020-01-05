@@ -114,16 +114,6 @@ public class Welcome extends AppCompatActivity {
         }
     }
 
-    private void updateUIWithUser(FirebaseUser user) {
-        if (user != null) {
-            String name = user.getDisplayName();
-            String email = user.getEmail();
-            String photo = String.valueOf(user.getPhotoUrl());
-
-
-        }
-    }
-
     public void logOnClick(View view){
         Intent homeActivity = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(homeActivity);
