@@ -2,11 +2,13 @@ package com.example.initialphase.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +29,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -61,6 +64,7 @@ public class CityDetailActivity extends AppCompatActivity {
         imgCurrentUser = findViewById(R.id.post_detail_currentuser_img);
 
         title = findViewById(R.id.post_detail_title);
+
         curiosidades = findViewById(R.id.post_detail_desc);
         transporte = findViewById(R.id.post_detail_transporte);
         estadia = findViewById(R.id.post_detail_estadia);
@@ -139,7 +143,53 @@ public class CityDetailActivity extends AppCompatActivity {
 
         iniRvComment();
 
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(RvComment);
+
     }
+
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            DatabaseReference commentRef = firebaseDatabase.getReference(COMMENT_KEY).child(cityKey);
+            int pos = viewHolder.getAdapterPosition();
+            Comment comentarioRemover = listComment.get(pos);
+            listComment.remove(pos);
+            commentAdapter.notifyItemRemoved(pos);
+
+            commentRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot snap:dataSnapshot.getChildren()){
+                        Comment comment = snap.getValue(Comment.class);
+
+                        if (listComment.size() == 0){
+                            commentRef.removeValue();
+                            return;
+                        }else{
+                            if (comment.getUid().equals(firebaseUser.getUid())
+                                    && comment.getContent().equals(comentarioRemover.getContent())){
+
+                                commentRef.child(snap.getKey()).removeValue();
+                                return;
+                            }
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+    };
 
     private void iniRvComment() {
 
@@ -194,17 +244,6 @@ public class CityDetailActivity extends AppCompatActivity {
     private void showMessage(String message) {
 
         Toast.makeText(this,message,Toast.LENGTH_LONG).show();
-
-    }
-
-
-    private String timestampToString(long time) {
-
-        Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
-        calendar.setTimeInMillis(time);
-        String date = DateFormat.format("dd-MM-yyyy",calendar).toString();
-        return date;
-
 
     }
 }

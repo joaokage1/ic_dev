@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#f4f4f4"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/pontuacao_background_profile"
     android:paddingTop="8dp">
 
     <ImageView
@@ -38,12 +39,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_button_style_rounded"
         android:text="Text Comment Goes Here"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/comment_user_img"
-        app:layout_constraintTop_toBottomOf="@+id/comment_username" />
+        app:layout_constraintTop_toBottomOf="@+id/comment_username"
+        app:layout_constraintVertical_bias="0.375" />
 
     <TextView
         android:id="@+id/comment_date"
@@ -59,4 +63,14 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/comment_username"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deletartxtComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deslize para deletar"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>

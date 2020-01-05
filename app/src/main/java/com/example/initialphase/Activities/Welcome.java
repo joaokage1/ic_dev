@@ -24,6 +24,7 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class Welcome extends AppCompatActivity {
 
@@ -81,7 +82,13 @@ public class Welcome extends AppCompatActivity {
                         progressBar.setVisibility(View.INVISIBLE);
 
                         FirebaseUser user = mAuth.getCurrentUser();
-                        //updateUIWithUser(user);
+
+                        String[] testBefore = user.getEmail().split("@");
+
+                        UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
+                                .setDisplayName(testBefore[0])
+                                .build();
+                        user.updateProfile(profileChangeRequest);
                         updateUI();
                     } else {
                         progressBar.setVisibility(View.INVISIBLE);

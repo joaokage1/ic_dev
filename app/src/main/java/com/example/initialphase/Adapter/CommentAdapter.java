@@ -56,7 +56,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
     public class CommentViewHolder extends RecyclerView.ViewHolder{
 
         ImageView img_user;
-        TextView tv_name,tv_content,tv_date;
+        TextView tv_name,tv_content,tv_date, deletartxtComment;
 
         public CommentViewHolder(View itemView) {
             super(itemView);
@@ -64,6 +64,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
             tv_name = itemView.findViewById(R.id.comment_username);
             tv_content = itemView.findViewById(R.id.comment_content);
             tv_date = itemView.findViewById(R.id.comment_date);
+            deletartxtComment = itemView.findViewById(R.id.deletartxtComment);
         }
     }
 

@@ -46,7 +46,7 @@
         android:id="@+id/txt_mail_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/capriola"
         android:text="@string/mail"
         android:textAlignment="center"
