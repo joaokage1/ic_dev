@@ -1,11 +1,13 @@
 package com.example.initialphase.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.transition.TransitionManager;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -78,10 +80,30 @@ public class ProfileActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                Intent intent = new Intent(getApplicationContext(), Welcome.class);
-                startActivity(intent);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+                        ProfileActivity.this);
+                alertDialog.setTitle("LogOut");
+                alertDialog.setMessage("Tem certeza que deseja sair ?");
+                alertDialog.setIcon(R.drawable.logosemfundo);
+                alertDialog.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("EXIT", true);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                alertDialog.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        return;
+                    }
+                });
+                AlertDialog alertDialogMain = alertDialog.create();
+                alertDialogMain.show();
             }
         });
 
