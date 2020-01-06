@@ -39,25 +39,20 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
 
     private Context mContext;
     private List<Comment> mData;
-    static String COMMENT_KEY = "Comment" ;
     FirebaseDatabase firebaseDatabase;
-    String cityKey;
+    String commentKey;
     FirebaseUser firebaseUser;
     Activity activity;
+    String dbKey;
 
-
-    public CommentAdapter(Context mContext, List<Comment> mData) {
-        this.mContext = mContext;
-        this.mData = mData;
-    }
-
-    public CommentAdapter(Context mContext, List<Comment> mData, FirebaseDatabase db, String key, FirebaseUser firebaseUser, Activity activity) {
+    public CommentAdapter(Context mContext, List<Comment> mData, FirebaseDatabase db, String key, FirebaseUser firebaseUser, Activity activity, String dbKey) {
         this.mContext = mContext;
         this.mData = mData;
         firebaseDatabase = db;
-        cityKey = key;
+        commentKey = key;
         this.firebaseUser = firebaseUser;
         this.activity = activity;
+        this.dbKey = dbKey;
     }
 
     @NonNull
@@ -109,7 +104,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
                 alertDialog.setIcon(R.drawable.logosemfundo);
                 alertDialog.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        DatabaseReference commentRef1 = firebaseDatabase.getReference(COMMENT_KEY).child(cityKey);
+                        DatabaseReference commentRef1 = firebaseDatabase.getReference(dbKey).child(commentKey);
 
                         commentRef1.addValueEventListener(new ValueEventListener() {
                             @Override

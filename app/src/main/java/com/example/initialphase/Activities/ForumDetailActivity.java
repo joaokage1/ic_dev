@@ -161,7 +161,7 @@ public class ForumDetailActivity extends AppCompatActivity {
 
 
                 if(listComment.size()>0){
-                    commentAdapter = new CommentAdapter(getApplicationContext(),listComment);
+                    commentAdapter = new CommentAdapter(getApplicationContext(),listComment, firebaseDatabase, forumKey, firebaseUser, ForumDetailActivity.this, COMMENT_KEY);
                     RvComment.setAdapter(commentAdapter);
 
                 }

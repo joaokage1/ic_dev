@@ -185,7 +185,7 @@ public class CityDetailActivity extends AppCompatActivity {
                 }
 
                 if(listComment.size()>0){
-                    commentAdapter = new CommentAdapter(getApplicationContext(),listComment, firebaseDatabase, cityKey, firebaseUser, CityDetailActivity.this);
+                    commentAdapter = new CommentAdapter(getApplicationContext(),listComment, firebaseDatabase, cityKey, firebaseUser, CityDetailActivity.this, COMMENT_KEY);
                     RvComment.setAdapter(commentAdapter);
                 }
 
