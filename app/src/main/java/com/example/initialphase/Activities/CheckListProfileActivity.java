@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -21,6 +22,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CheckListProfileActivity extends AppCompatActivity {
 
@@ -473,25 +477,47 @@ public class CheckListProfileActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Você já pode começar a competir lol "+ PT + "pontos",Toast.LENGTH_LONG).show();
                 }
 
-
-                DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile").push();
-
-                String uid = firebaseUser.getUid();
-                String uname = firebaseUser.getDisplayName();
-
-                Pontuacao pontuacao = new Pontuacao();
-                pontuacao.setContent("" + PT);
-                pontuacao.setUid(uid);
-                pontuacao.setUname(uname);
-
-                pontuacaoPorfileReference.setValue(pontuacao).addOnFailureListener(new OnFailureListener() {
+                DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile");
+                pontuacaoPorfileReference.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(),"fail to add comment : "+e.getMessage(),Toast.LENGTH_LONG).show();
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        boolean achou = false;
+                        for (DataSnapshot snap:dataSnapshot.getChildren()){
+                            Pontuacao p = snap.getValue(Pontuacao.class);
+                            if (p.getUid() == firebaseUser.getUid()){
+                                achou = true;
+                            }
+                        }
+
+                        if (!achou){
+                            DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile").push();
+
+                            String uid = firebaseUser.getUid();
+                            String uname = firebaseUser.getDisplayName();
+
+                            Pontuacao pontuacao = new Pontuacao();
+                            pontuacao.setContent("" + PT);
+                            pontuacao.setUid(uid);
+                            pontuacao.setUname(uname);
+
+                            pontuacaoPorfileReference.setValue(pontuacao).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getApplicationContext(),"fail to add : "+e.getMessage(),Toast.LENGTH_LONG).show();
+                                }
+                            });
+
+                            PT = 0;
+                        }else{
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
                     }
                 });
-
-                PT = 0;
 
                 finish();
             }

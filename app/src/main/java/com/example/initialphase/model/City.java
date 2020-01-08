@@ -5,7 +5,7 @@ import com.google.firebase.database.ServerValue;
 public class City {
 
     private String name, cityFlag, countryFlag, cityKey;
-    private String bairro, contatos, curiosidades, custo, transporte, universidades, photo;
+    private String bairro, contatos, curiosidades, custo, transporte, universidades, photo, lugares;
     private Object timestamp;
 
     public City(String name, String cityFlag, String countryFlag) {
@@ -15,7 +15,7 @@ public class City {
         this.timestamp = ServerValue.TIMESTAMP;
     }
 
-    public City(String name, String cityFlag, String countryFlag, String bairro, String contatos, String curiosidades, String custo, String transporte, String universidades, String photo) {
+    public City(String name, String cityFlag, String countryFlag, String bairro, String contatos, String curiosidades, String custo, String transporte, String universidades, String photo, String lugares) {
         this.name = name;
         this.cityFlag = cityFlag;
         this.countryFlag = countryFlag;
@@ -27,9 +27,18 @@ public class City {
         this.universidades = universidades;
         this.photo = photo;
         this.timestamp = ServerValue.TIMESTAMP;
+        this.lugares = lugares;
     }
 
     public City() {
+    }
+
+    public String getLugares() {
+        return lugares;
+    }
+
+    public void setLugares(String lugares) {
+        this.lugares = lugares;
     }
 
     public String getPhoto() {

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class CityDetailActivity extends AppCompatActivity {
     ImageView imgPost,imgCurrentUser, imgPhoto;
     TextView curiosidades, title, estadia, custo, transporte, contatos, universidades;
     EditText editTextComment;
-    Button btnAddComment;
+    Button btnAddComment, btn_lugares;
     String cityKey;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -78,6 +79,17 @@ public class CityDetailActivity extends AppCompatActivity {
 
         editTextComment = findViewById(R.id.post_detail_comment);
         btnAddComment = findViewById(R.id.post_detail_add_comment_btn);
+
+        btn_lugares = findViewById(R.id.btn_lugares);
+        String url = getIntent().getExtras().getString("lugares");
+        btn_lugares.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
 
 
         firebaseAuth = FirebaseAuth.getInstance();

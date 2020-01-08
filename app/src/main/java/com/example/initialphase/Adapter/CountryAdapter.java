@@ -76,6 +76,7 @@ public class CountryAdapter  extends RecyclerView.Adapter<CountryAdapter.Country
                     postDetailActivity.putExtra("transporte", list.get(position).getTransporte());
                     postDetailActivity.putExtra("universidades", list.get(position).getUniversidades());
                     postDetailActivity.putExtra("photo", list.get(position).getPhoto());
+                    postDetailActivity.putExtra("lugares", list.get(position).getLugares());
                     postDetailActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext.startActivity(postDetailActivity);
                 }
