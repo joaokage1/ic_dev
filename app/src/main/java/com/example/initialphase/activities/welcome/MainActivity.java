@@ -7,7 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.initialphase.activities.info.Experiences;
+import com.example.initialphase.activities.info.ExperiencesMainActivity;
 import com.example.initialphase.activities.info.PaisesECulturasActivity;
 import com.example.initialphase.activities.info.ProvasAnterioresLinguasActivity;
 import com.example.initialphase.activities.docs.DocsActivity;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void onClickExperiences(View view) {
-        Intent i = new Intent(this, Experiences.class);
+        Intent i = new Intent(this, ExperiencesMainActivity.class);
         startActivity(i);
     }
 

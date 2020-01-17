@@ -16,7 +16,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExperiencesMainActivity"></activity>
+        <activity android:name=".activities.info.ExperienceListActivity"></activity>
+        <activity android:name=".activities.info.ExperiencesMainActivity" />
         <activity android:name=".activities.profile.ForumActivity" />
         <activity android:name=".activities.profile.ForumDetailActivity" />
         <activity android:name=".activities.info.CityDetailActivity" />

@@ -154,6 +154,8 @@ public class ForumActivity extends AppCompatActivity {
                 forumAddBtn.setVisibility(View.VISIBLE);
                 popUpProgressBar.setVisibility(View.INVISIBLE);
                 popAddForum.dismiss();
+                popUpDescription.setText("");
+                popUpTitle.setText("");
             }
         });
     }
