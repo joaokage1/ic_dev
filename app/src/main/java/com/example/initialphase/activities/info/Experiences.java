@@ -1,4 +1,4 @@
-package com.example.initialphase.Activities;
+package com.example.initialphase.activities.info;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;

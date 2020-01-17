@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.initialphase.Activities.ForumDetailActivity;
+import com.example.initialphase.activities.profile.ForumDetailActivity;
 import com.example.initialphase.R;
 import com.example.initialphase.model.Forum;
 

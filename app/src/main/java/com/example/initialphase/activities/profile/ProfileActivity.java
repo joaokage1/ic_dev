@@ -1,4 +1,4 @@
-package com.example.initialphase.Activities;
+package com.example.initialphase.activities.profile;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.initialphase.activities.welcome.Welcome;
 import com.example.initialphase.R;
 import com.example.initialphase.model.Pontuacao;
 import com.google.firebase.auth.FirebaseAuth;

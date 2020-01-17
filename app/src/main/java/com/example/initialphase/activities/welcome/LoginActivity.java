@@ -1,4 +1,4 @@
-package com.example.initialphase.Activities;
+package com.example.initialphase.activities.welcome;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

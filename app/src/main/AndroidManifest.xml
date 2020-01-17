@@ -13,43 +13,44 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
-        <activity android:name=".Activities.ForumActivity"></activity>
-        <activity android:name=".Activities.ForumDetailActivity" />
-        <activity android:name=".Activities.CityDetailActivity" />
-        <activity android:name=".Activities.PaisesECulturasActivity" />
-        <activity android:name=".Activities.VideosActivity" />
-        <activity android:name=".Activities.CheckListProfileActivity" />
-        <activity android:name=".Activities.RequirementsCheckListActivity" />
-        <activity android:name=".Activities.DocsCheckListActivity" />
+        android:theme="@style/AppTheme">
+        <activity android:name=".ExperiencesMainActivity"></activity>
+        <activity android:name=".activities.profile.ForumActivity" />
+        <activity android:name=".activities.profile.ForumDetailActivity" />
+        <activity android:name=".activities.info.CityDetailActivity" />
+        <activity android:name=".activities.info.PaisesECulturasActivity" />
+        <activity android:name=".activities.profile.VideosActivity" />
+        <activity android:name=".activities.profile.CheckListProfileActivity" />
+        <activity android:name=".activities.docs.RequirementsCheckListActivity" />
+        <activity android:name=".activities.docs.DocsCheckListActivity" />
         <activity
-            android:name=".Activities.ProvasAnterioresLinguasActivity"
+            android:name=".activities.info.ProvasAnterioresLinguasActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.CompRendaActivity"
+            android:name=".activities.docs.CompRendaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.ProfileActivity"
+            android:name=".activities.profile.ProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.DocsActivity"
+            android:name=".activities.docs.DocsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.RegisterActivity"
+            android:name=".activities.welcome.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.ResetPasswordActivity"
+            android:name=".activities.welcome.ResetPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".activities.welcome.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.Experiences"
+            android:name=".activities.info.Experiences"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.Welcome"
+            android:name=".activities.welcome.Welcome"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".activities.welcome.MainActivity"
             android:screenOrientation="portrait" />
 
         <meta-data

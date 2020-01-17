@@ -1,4 +1,4 @@
-package com.example.initialphase.Activities;
+package com.example.initialphase.activities.welcome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.initialphase.activities.info.Experiences;
+import com.example.initialphase.activities.info.PaisesECulturasActivity;
+import com.example.initialphase.activities.info.ProvasAnterioresLinguasActivity;
+import com.example.initialphase.activities.docs.DocsActivity;
+import com.example.initialphase.activities.profile.ProfileActivity;
 import com.example.initialphase.R;
 
 public class MainActivity extends AppCompatActivity{

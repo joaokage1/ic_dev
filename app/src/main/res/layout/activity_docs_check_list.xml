@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.DocsCheckListActivity">
+    tools:context=".activities.docs.DocsCheckListActivity">
 
     <ImageView
         android:id="@+id/imageView"

@@ -1,15 +1,14 @@
-package com.example.initialphase.Activities;
+package com.example.initialphase.activities.docs;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.DownloadManager;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.initialphase.R;
@@ -20,43 +19,55 @@ import com.google.firebase.storage.StorageReference;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
-public class DocsActivity extends AppCompatActivity {
+public class CompRendaActivity extends AppCompatActivity {
 
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
     StorageReference reference;
 
+    Button btn_renda_autonomos , btn_comp_renda, btn_socioeconomica;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_docs);
+        setContentView(R.layout.activity_comp_renda);
+
+        btn_comp_renda = findViewById(R.id.btn_comp_renda);
+        btn_renda_autonomos = findViewById(R.id.btn_renda_autonomos);
+        btn_socioeconomica = findViewById(R.id.btn_socioeconomica);
+
+        btn_comp_renda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadRelatorioMensal("ANEXO V - RELAÇÃO DOS DOCUMENTOS PARA A COMPROVAÇÃO DE RENDA");
+            }
+        });
+
+        btn_renda_autonomos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadRelatorioMensal("ANEXO VI - DECLARAÇÃO DE RENDA PARA AUTÔNOMOS");
+            }
+        });
+
+        btn_socioeconomica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadRelatorioMensal("ANEXO III - DECLARAÇÃO SOCIOECONÔMICA");
+            }
+        });
+
     }
 
-    public void onClickRenda(View view){
-        Intent intent = new Intent(this,
-                CompRendaActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickCheckList(View view){
-        Intent intent = new Intent(this,
-                DocsCheckListActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickDownloadRelatorioMensal(View view){
-        downloadRelatorioMensal();
-    }
-
-    private void downloadRelatorioMensal() {
+    private void downloadRelatorioMensal(String nome) {
         storageReference = firebaseStorage.getInstance().getReference();
-        reference = storageReference.child("modelo_relatorio_de_viagem_auxilio_participacao_em_atividades_e_eventos.doc");
+        reference = storageReference.child(nome + ".docx");
 
         reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
-                downloadFile(DocsActivity.this,"modelo_relatorio_de_viagem_auxilio_participacao_em_atividades_e_eventos", ".doc", DIRECTORY_DOWNLOADS,url);
+                downloadFile(CompRendaActivity.this,nome, ".docx", DIRECTORY_DOWNLOADS,url);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

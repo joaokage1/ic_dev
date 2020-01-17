@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Welcome"
+    tools:context=".activities.welcome.Welcome"
     android:orientation="vertical"
     android:background="@drawable/welcome_background">
     <LinearLayout
@@ -40,17 +40,18 @@
 
                 android:id="@+id/button_log"
                 android:layout_width="230dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/buttonstyle"
+                android:drawableStart="@drawable/logosemfundo24dp"
                 android:onClick="logOnClick"
-                android:text="    ENTRAR    " />
+                android:text="ENTRAR    " />
 
             <Button
 
                 android:id="@+id/button_log_gmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="50px"
                 android:background="@drawable/buttonstyle"

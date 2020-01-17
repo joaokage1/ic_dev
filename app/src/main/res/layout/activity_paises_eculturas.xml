@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15px"
-    tools:context=".Activities.PaisesECulturasActivity">
+    tools:context=".activities.info.PaisesECulturasActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPaises"
