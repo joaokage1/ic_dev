@@ -179,7 +179,7 @@
             android:layout_marginStart="16dp"
             android:background="@drawable/edittext_button_style_rounded"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine|textPersonName"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toBottomOf="@+id/post_detail_currentuser_img"
             app:layout_constraintStart_toEndOf="@+id/post_detail_currentuser_img"

@@ -5,7 +5,7 @@
     android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgray"
+    android:background="@drawable/welcome_background"
     tools:context=".activities.profile.ProfileActivity">
 
     <ImageView
@@ -50,6 +50,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/mail"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +65,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/ready"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -82,6 +84,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/name"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/img_photo_profile"
@@ -124,6 +127,7 @@
         android:fontFamily="sans-serif"
         android:text="Pontos"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"

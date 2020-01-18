@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_expanded"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.profile.ProfileActivity"
-    android:id="@+id/constraint_expanded"
-    android:background="@color/lightgray">
+    android:background="@drawable/welcome_background"
+    tools:context=".activities.profile.ProfileActivity">
 
     <ImageView
         android:id="@+id/img_back_profile"
@@ -50,6 +50,7 @@
         android:fontFamily="@font/capriola"
         android:text="@string/mail"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,6 +64,7 @@
         android:fontFamily="@font/capriola"
         android:text="@string/name"
         android:textAlignment="center"
+        android:textColor="@color/backgroundcolor"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/img_photo_profile"
         app:layout_constraintStart_toStartOf="@+id/img_photo_profile"
