@@ -10,9 +10,22 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPaises"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
         >
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/edittext_button_style_rounded"
+        android:drawableStart="@drawable/ic_create_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvPaises" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

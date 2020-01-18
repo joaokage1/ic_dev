@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/popup_name_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:hint="Nome da cidade"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/popup_curiosidades_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Curiosidades da cidade"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+               />
+
+            <EditText
+                android:id="@+id/popup_contatos_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Contatos importantes"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                 />
+
+            <EditText
+                android:id="@+id/popup_bairros_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Informações de bairros \nPerigos e estadia"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                 />
+
+            <EditText
+                android:id="@+id/popup_transporte_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Informações de transporte da cidade"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+               />
+
+            <EditText
+                android:id="@+id/popup_imagem_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Link imagem da cidade"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart" />
+
+            <EditText
+                android:id="@+id/popup_imagem_cidade2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Link imagem atração"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart" />
+
+            <EditText
+                android:id="@+id/popup_pais_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Link bandeira do país"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart" />
+
+            <EditText
+                android:id="@+id/popup_lugares_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popup_edittext_style"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Link lugares da cidade"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/popup_progressBar_cidade"
+                    style="@android:style/Widget.Holo.Light.ProgressBar.Small"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/circle_bg"
+                    android:indeterminate="true"
+                    android:padding="4dp"
+                    android:progressTint="#009688"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="invisible" />
+
+                <ImageView
+
+                    android:id="@+id/popup_add_cidade"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/circle_bg"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
