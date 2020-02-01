@@ -180,7 +180,8 @@
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="onClickDownloadTermoCompromisso">
 
                     <LinearLayout
                         android:id="@+id/cv_termo_de_compromisso"
@@ -219,7 +220,8 @@
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="onClickDownloadRecurso">
 
                     <LinearLayout
                         android:id="@+id/cv_recurso"
@@ -250,10 +252,11 @@
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="onClickDownloadAptidao">
 
                     <LinearLayout
-                        android:id="@+id/cv_pessoa_sem_renda"
+                        android:id="@+id/cv_aptidao"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -270,7 +273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Pessoa sem renda"
+                            android:text="Aptidão Física"
                             android:textStyle="bold" />
 
                     </LinearLayout>

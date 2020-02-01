@@ -16,17 +16,40 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.info.ExperienceDetailActivity"></activity>
-        <activity android:name=".activities.info.ExperienceListActivity" />
-        <activity android:name=".activities.info.ExperiencesMainActivity" />
-        <activity android:name=".activities.profile.ForumActivity" />
-        <activity android:name=".activities.profile.ForumDetailActivity" />
-        <activity android:name=".activities.info.CityDetailActivity" />
-        <activity android:name=".activities.info.PaisesECulturasActivity" />
-        <activity android:name=".activities.profile.VideosActivity" />
-        <activity android:name=".activities.profile.CheckListProfileActivity" />
-        <activity android:name=".activities.docs.RequirementsCheckListActivity" />
-        <activity android:name=".activities.docs.DocsCheckListActivity" />
+        <activity android:name=".activities.welcome.InscricoesActivity"></activity>
+        <activity
+            android:name=".activities.info.ExperienceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.info.ExperienceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.info.ExperiencesMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.profile.ForumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.profile.ForumDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.info.CityDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.info.PaisesECulturasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.profile.VideosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.profile.CheckListProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.docs.RequirementsCheckListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.docs.DocsCheckListActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.info.ProvasAnterioresLinguasActivity"
             android:screenOrientation="portrait" />
@@ -47,9 +70,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.welcome.LoginActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.info.Experiences"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.welcome.Welcome"

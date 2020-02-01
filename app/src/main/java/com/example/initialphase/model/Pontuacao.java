@@ -4,7 +4,7 @@ import com.google.firebase.database.ServerValue;
 
 public class Pontuacao {
 
-    private String content,uid,uname;
+    private String content,uid,uname, key;
     private Object timestamp;
 
     public Pontuacao() {
@@ -56,4 +56,11 @@ public class Pontuacao {
         this.timestamp = timestamp;
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 }

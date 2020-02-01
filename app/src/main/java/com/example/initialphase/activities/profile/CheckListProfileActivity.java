@@ -472,47 +472,25 @@ public class CheckListProfileActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Você já pode começar a competir lol "+ PT + "pontos",Toast.LENGTH_LONG).show();
                 }
 
-                DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile");
-                pontuacaoPorfileReference.addValueEventListener(new ValueEventListener() {
+                DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile").push();
+                String key = pontuacaoPorfileReference.getKey();
+                String uid = firebaseUser.getUid();
+                String uname = firebaseUser.getDisplayName();
+
+                Pontuacao pontuacao = new Pontuacao();
+                pontuacao.setContent("" + PT);
+                pontuacao.setUid(uid);
+                pontuacao.setUname(uname);
+                pontuacao.setKey(key);
+
+                pontuacaoPorfileReference.setValue(pontuacao).addOnFailureListener(new OnFailureListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        boolean achou = false;
-                        for (DataSnapshot snap:dataSnapshot.getChildren()){
-                            Pontuacao p = snap.getValue(Pontuacao.class);
-                            if (p.getUid() == firebaseUser.getUid()){
-                                achou = true;
-                            }
-                        }
-
-                        if (!achou){
-                            DatabaseReference pontuacaoPorfileReference = firebaseDatabase.getReference("Pontuacao").child("pprofile").push();
-
-                            String uid = firebaseUser.getUid();
-                            String uname = firebaseUser.getDisplayName();
-
-                            Pontuacao pontuacao = new Pontuacao();
-                            pontuacao.setContent("" + PT);
-                            pontuacao.setUid(uid);
-                            pontuacao.setUname(uname);
-
-                            pontuacaoPorfileReference.setValue(pontuacao).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getApplicationContext(),"fail to add : "+e.getMessage(),Toast.LENGTH_LONG).show();
-                                }
-                            });
-
-                            PT = 0;
-                        }else{
-
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(),"fail to add : "+e.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 });
+
+                PT = 0;
 
                 finish();
             }

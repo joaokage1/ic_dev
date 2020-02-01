@@ -47,6 +47,18 @@ public class DocsActivity extends AppCompatActivity {
         downloadRelatorioMensal();
     }
 
+    public void onClickDownloadTermoCompromisso(View view){
+        downloadDocs("ANEXO II termo_compromisso.docx");
+    }
+
+    public void onClickDownloadRecurso(View view){
+        downloadDocs("ANEXO IV – REQUERIMENTO DE RECURSO.docx");
+    }
+
+    public void onClickDownloadAptidao(View view){
+        downloadDocs("ANEXO XI - DECLARAÇÃO DE APTIDÃO FÍSICA E MENTAL.docx");
+    }
+
     private void downloadRelatorioMensal() {
         storageReference = firebaseStorage.getInstance().getReference();
         reference = storageReference.child("modelo_relatorio_de_viagem_auxilio_participacao_em_atividades_e_eventos.doc");
@@ -74,5 +86,24 @@ public class DocsActivity extends AppCompatActivity {
         request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
 
         downloadManager.enqueue(request);
+    }
+
+
+    private void downloadDocs(String nome) {
+        storageReference = firebaseStorage.getInstance().getReference();
+        reference = storageReference.child(nome);
+
+        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                String url = uri.toString();
+                downloadFile(DocsActivity.this,nome, ".docx", DIRECTORY_DOWNLOADS,url);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(),"Não foi possível fazer o Download",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }

@@ -25,7 +25,7 @@ public class CompRendaActivity extends AppCompatActivity {
     StorageReference storageReference;
     StorageReference reference;
 
-    Button btn_renda_autonomos , btn_comp_renda, btn_socioeconomica;
+    Button btn_renda_autonomos , btn_comp_renda, btn_socioeconomica, btn_semrenda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,31 +35,39 @@ public class CompRendaActivity extends AppCompatActivity {
         btn_comp_renda = findViewById(R.id.btn_comp_renda);
         btn_renda_autonomos = findViewById(R.id.btn_renda_autonomos);
         btn_socioeconomica = findViewById(R.id.btn_socioeconomica);
+        btn_semrenda = findViewById(R.id.btn_semrenda);
 
         btn_comp_renda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadRelatorioMensal("ANEXO V - RELAÇÃO DOS DOCUMENTOS PARA A COMPROVAÇÃO DE RENDA");
+                downloadDocs("ANEXO V - RELAÇÃO DOS DOCUMENTOS PARA A COMPROVAÇÃO DE RENDA");
+            }
+        });
+
+        btn_semrenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downloadDocs("ANEXO IX - PESSOA SEM RENDA");
             }
         });
 
         btn_renda_autonomos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadRelatorioMensal("ANEXO VI - DECLARAÇÃO DE RENDA PARA AUTÔNOMOS");
+                downloadDocs("ANEXO VI - DECLARAÇÃO DE RENDA PARA AUTÔNOMOS");
             }
         });
 
         btn_socioeconomica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadRelatorioMensal("ANEXO III - DECLARAÇÃO SOCIOECONÔMICA");
+                downloadDocs("ANEXO III - DECLARAÇÃO SOCIOECONÔMICA");
             }
         });
 
     }
 
-    private void downloadRelatorioMensal(String nome) {
+    private void downloadDocs(String nome) {
         storageReference = firebaseStorage.getInstance().getReference();
         reference = storageReference.child(nome + ".docx");
 

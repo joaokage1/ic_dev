@@ -48,9 +48,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void onClickinscricao(View view){
-        String url = "http://www.iftm.edu.br/internacional/editais/";
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
+        Intent i = new Intent(this, InscricoesActivity.class);
         startActivity(i);
     }
 }

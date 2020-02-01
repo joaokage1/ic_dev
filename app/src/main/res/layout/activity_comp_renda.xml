@@ -28,7 +28,7 @@
             <Button
                 android:id="@+id/btn_renda_autonomos"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/pontuacao_background"
                 android:drawableStart="@android:drawable/ic_menu_save"
@@ -39,7 +39,7 @@
             <Button
                 android:id="@+id/btn_comp_renda"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/pontuacao_background"
                 android:drawableStart="@android:drawable/ic_menu_save"
@@ -50,11 +50,22 @@
             <Button
                 android:id="@+id/btn_socioeconomica"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/pontuacao_background"
                 android:drawableStart="@android:drawable/ic_menu_save"
                 android:text="DECLARAÇÃO SOCIOECONÔMICA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_semrenda"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/pontuacao_background"
+                android:drawableStart="@android:drawable/ic_menu_save"
+                android:text="DECLARAÇÃO PESSOA SEM RENDA"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
