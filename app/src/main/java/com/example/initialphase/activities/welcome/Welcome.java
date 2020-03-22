@@ -1,14 +1,19 @@
 package com.example.initialphase.activities.welcome;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -25,6 +30,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserProfileChangeRequest;
+
+import static java.security.AccessController.getContext;
 
 public class Welcome extends AppCompatActivity {
 
@@ -82,14 +89,30 @@ public class Welcome extends AppCompatActivity {
                         progressBar.setVisibility(View.INVISIBLE);
 
                         FirebaseUser user = mAuth.getCurrentUser();
+                        final EditText taskEditText = new EditText(this);
+                        AlertDialog dialog = new AlertDialog.Builder(this)
+                                .setTitle("Digite seu nome de viajante !")
+                                .setMessage("Seja bem vindo ao interTravellin!!")
+                                .setView(taskEditText)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        String task = String.valueOf(taskEditText.getText());
+                                        if (task.isEmpty()){
+                                            return;
+                                        }else {
+                                            UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
+                                                    .setDisplayName(task)
+                                                    .build();
+                                            user.updateProfile(profileChangeRequest);
+                                            updateUI();
+                                        }
+                                    }
+                                })
+                                .create();
+                        dialog.show();
 
-                        String[] testBefore = user.getEmail().split("@");
 
-                        UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
-                                .setDisplayName(testBefore[0])
-                                .build();
-                        user.updateProfile(profileChangeRequest);
-                        updateUI();
                     } else {
                         progressBar.setVisibility(View.INVISIBLE);
 
