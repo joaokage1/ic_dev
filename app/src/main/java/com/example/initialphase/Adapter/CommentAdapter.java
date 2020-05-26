@@ -65,7 +65,8 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
         holder.tv_content.setText(mData.get(position).getContent());
         holder.tv_date.setText(timestampToString((Long)mData.get(position).getTimestamp()));
 
-        if (!holder.tv_name.getText().equals(firebaseUser.getDisplayName())){
+
+        if (!mData.get(position).getUid().equals(firebaseUser.getUid())){
             holder.btn_delete.setVisibility(View.INVISIBLE);
         }
 

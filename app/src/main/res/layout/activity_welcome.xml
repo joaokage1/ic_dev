@@ -50,7 +50,7 @@
             <Button
 
                 android:id="@+id/button_log_gmail"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="50px"
