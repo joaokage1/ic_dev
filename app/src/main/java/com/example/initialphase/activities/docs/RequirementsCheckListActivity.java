@@ -156,6 +156,7 @@ public class RequirementsCheckListActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"fail to add : "+e.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 });
+                PT = 0;
 
                 finish();
             }
