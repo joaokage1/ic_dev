@@ -20,8 +20,8 @@
 
             <ImageView
                 android:id="@+id/img_person"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
                 app:srcCompat="@drawable/profile" />
 
             <TextView
@@ -34,12 +34,20 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/img_detail_experience"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="20dp"
-                tools:srcCompat="@tools:sample/backgrounds/scenic[9]" />
+           <androidx.cardview.widget.CardView
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               app:cardCornerRadius="8dp"
+               android:layout_margin="5dp"
+               android:elevation="10dp">
+
+               <ImageView
+                   android:id="@+id/img_detail_experience"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   tools:srcCompat="@tools:sample/backgrounds/scenic[9]" />
+           </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/txt_curso_experience"
@@ -50,16 +58,22 @@
                 android:text="Curso"
                 android:textColor="@color/backgroundcolor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
 
-            <TextView
+                />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:id="@+id/txt_experiencia_detail"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="XXXXXXXXXXX"
                 android:textColor="@color/backgroundcolor"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                >
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
